@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- https://icons8.com.br -->
+</head>
+<body>
+    <main class="desktop">
+
+        <section id="windowBrowser" class="window" >
+            <header class="window-header">
+                <section>
+                    <span class="btn close"></span>
+                    <span class="btn maximize"></span>
+                    <span class="btn minimize"></span>
+                </section>
+                <h1>Browser</h1>
+            </header>
+
+            <main>
+                <iframe src="https://www.bing.com/?cc=br" frameborder="0"></iframe>
+            </main>
+
+        </section>
+
+        <ul class="icons">
+            <li class="icon">
+                <img alt="Ícone de Lixeira" src="https://img.icons8.com/color/48/000000/empty-trash--v1.png"/>
+                <h1>Lixeira</h1>
+            </li>
+            <li class="icon">
+                <img alt="Ícone de Pasta" src="https://img.icons8.com/color/48/000000/folder-invoices--v1.png"/>
+                <h1>Meus Projetos</h1>
+            </li>
+            <li class="icon">
+                <img alt="League of Legends" src="https://img.icons8.com/color/48/000000/league-of-legends.png"/>
+                <h1>Não abra!</h1>
+            </li>
+        </ul>
+        
+
+        <footer class="doc-wrapper">
+            <section class="doc">
+                <img src="https://img.icons8.com/color/48/000000/steam-circled.png"/>
+                <img onclick="toggleBrowser()" src="https://img.icons8.com/color/2x/chrome.png"/>
+                <img src="https://img.icons8.com/color/2x/microsoft-teams.png"/>
+            </section>
+        </footer>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

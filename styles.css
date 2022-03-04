@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+.desktop {
+  height: 100vh;
+  background-color: #4e4e4e;
+  background-image: url(assets/minimalism-anime-girls-anime-mikasa-ackerman-wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-blend-mode: overlay;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.desktop .window {
+  width: 80vh;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.123);
+  position: absolute;
+  z-index: 50;
+  top: 10vh;
+  left: 10vh;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transform: scale(5);
+          transform: scale(5);
+  -webkit-filter: blur(32px);
+          filter: blur(32px);
+}
+
+.desktop .window.window-opened {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  opacity: 1;
+  z-index: 51;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.desktop .window .window-header {
+  background-color: #eaeaea38;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px;
+}
+
+.desktop .window .window-header section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+}
+
+.desktop .window .window-header section .btn {
+  width: 24px;
+  height: 24px;
+  background-color: #3b3b3b;
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.desktop .window .window-header section .btn.close {
+  background-color: red;
+}
+
+.desktop .window .window-header section .btn.maximize {
+  background-color: yellow;
+}
+
+.desktop .window .window-header section .btn.minimize {
+  background-color: green;
+}
+
+.desktop .window .window-header h1 {
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}
+
+.desktop .window main {
+  background-color: orange;
+  height: 100%;
+  width: 100%;
+}
+
+.desktop .window main iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.desktop .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 12px;
+}
+
+.desktop .icons .icon {
+  text-align: center;
+  width: 112px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  opacity: 0.8;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.desktop .icons .icon:hover {
+  background-color: rgba(255, 255, 255, 0.219);
+  opacity: 1;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-backdrop-filter: blur(32px);
+          backdrop-filter: blur(32px);
+}
+
+.desktop .icons .icon img {
+  width: 64px;
+}
+
+.desktop .icons .icon h1 {
+  font-size: 12px;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.75px;
+}
+
+.desktop .doc-wrapper {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 32px;
+}
+
+.desktop .doc-wrapper .doc {
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.192);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 6px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  padding: 6px 24px;
+}
+
+.desktop .doc-wrapper .doc:hover {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+
+.desktop .doc-wrapper .doc img {
+  opacity: 0.8;
+  width: 54px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.desktop .doc-wrapper .doc img:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.25) translateY(-20px);
+          transform: scale(1.25) translateY(-20px);
+}
+/*# sourceMappingURL=styles.css.map */
