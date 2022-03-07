@@ -15,7 +15,7 @@
             <header class="window-header">
                 <section>
                     <span class="btn close"></span>
-                    <span class="btn maximize"></span>
+                    <span onclick="maximizeHandler('windowBrowser')"  class="btn maximize"></span>
                     <span class="btn minimize"></span>
                 </section>
                 <h1>Browser</h1>
@@ -25,6 +25,30 @@
                 <iframe src="https://www.bing.com/?cc=br" frameborder="0"></iframe>
             </main>
 
+        </section>
+
+
+
+        <section id="windowLeague" class="window" >
+            <header class="window-header">
+                <section>
+                    <span class="btn close"></span>
+                    <span onclick="maximizeHandler('windowLeague')" class="btn maximize"></span>
+                    <span class="btn minimize"></span>
+                </section>
+                <h1>League of Legends</h1>
+            </header>
+
+            <main>
+                <iframe class="iframe" src="https://angularoflegends.ivinrodrigues.com" frameborder="0"></iframe>
+            </main>
+
+        </section>
+
+        <section class="leagueWarning">
+            <div>
+                <p>Try maximizing the screen to initialize the game :)</p>
+            </div>
         </section>
 
         <ul class="icons">
@@ -37,7 +61,7 @@
                 <h1>Meus Projetos</h1>
             </li>
             <li class="icon">
-                <img alt="League of Legends" src="https://img.icons8.com/color/48/000000/league-of-legends.png"/>
+                <img id="leagueIcon" alt="League of Legends" src="https://img.icons8.com/color/48/000000/league-of-legends.png"/>
                 <h1>Não abra!</h1>
             </li>
         </ul>
@@ -46,7 +70,7 @@
         <footer class="doc-wrapper">
             <section class="doc">
                 <img src="https://img.icons8.com/color/48/000000/steam-circled.png"/>
-                <img onclick="toggleBrowser()" src="https://img.icons8.com/color/2x/chrome.png"/>
+                <img id="chromeIcon" src="https://img.icons8.com/color/2x/chrome.png"/>
                 <img src="https://img.icons8.com/color/2x/microsoft-teams.png"/>
             </section>
         </footer>

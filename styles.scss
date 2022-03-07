@@ -10,6 +10,39 @@
 html, body {
     overflow: hidden;
 }
+
+
+
+.leagueWarning {
+
+    div{
+        display: none;
+        color: white;
+        position: absolute;
+        left: 0;
+        bottom: 12%;
+        width: fit-content;
+        height: fit-content;
+        padding: 25px;
+        background-color: rgba(255, 255, 255, 0.192);
+        font-family: 'Roboto';
+        font-weight: 300;
+        padding-right: -24px ;
+        z-index: 52;
+        border-radius: 0px 5px 5px 0px;
+        
+        
+    }
+    p{
+
+    }
+    .active{
+        display: block;
+    }
+}
+
+
+
 .desktop {
     height: 100vh;
     background-color: #4e4e4e;
@@ -23,7 +56,7 @@ html, body {
 
     .window {
         width: 80vh;
-        height: 80vh;
+        height: 70vh;
         background-color:rgba(0, 0, 0, 0.123);
         
         position: absolute;
@@ -42,6 +75,14 @@ html, body {
             opacity: 1;
             z-index: 51;
             transform: scale(1);
+            &.maximized {
+
+                top: 0 !important;
+                left: 0 !important;
+                width: 100%;
+                height: 100vh;
+        
+            }
         }
 
         .window-header {
@@ -90,6 +131,10 @@ html, body {
             iframe {
                 width: 100%;
                 height: 100%;
+                &.maximized {
+                    height: 94.6%;
+
+                }
             }
         }
     }
