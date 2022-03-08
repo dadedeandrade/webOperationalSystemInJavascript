@@ -7,7 +7,8 @@
   font-family: "Roboto", sans-serif;
 }
 
-html, body {
+html,
+body {
   overflow: hidden;
 }
 
@@ -25,7 +26,7 @@ html, body {
   height: fit-content;
   padding: 25px;
   background-color: rgba(255, 255, 255, 0.192);
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 300;
   padding-right: -24px;
   z-index: 52;
@@ -52,8 +53,10 @@ html, body {
   width: 80vh;
   height: 70vh;
   background-color: rgba(0, 0, 0, 0.123);
+  border-radius: 25%;
+  -webkit-box-shadow: 0px 0px 75px 3px #252525;
+          box-shadow: 0px 0px 75px 3px #252525;
   position: absolute;
-  z-index: 50;
   top: 10vh;
   left: 10vh;
   opacity: 0;
@@ -81,11 +84,19 @@ html, body {
 }
 
 .desktop .window .window-header {
-  background-color: #eaeaea38;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #252525;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5%;
+  padding: 10px 12px;
 }
 
 .desktop .window .window-header section {
@@ -96,25 +107,124 @@ html, body {
 }
 
 .desktop .window .window-header section .btn {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background-color: #3b3b3b;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 50%;
   cursor: pointer;
   overflow: hidden;
 }
 
-.desktop .window .window-header section .btn.close {
-  background-color: red;
+.desktop .window .window-header section .btn.close .crossIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.desktop .window .window-header section .btn.close .line1 {
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background: #fff;
+}
+
+.desktop .window .window-header section .btn.close .line2 {
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background: #fff;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .desktop .window .window-header section .btn.maximize {
-  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3b3b3b;
+  z-index: 0;
+}
+
+.desktop .window .window-header section .btn .boxIcon {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 0;
+  right: 1;
+  top: 1;
+}
+
+.desktop .window .window-header section .btn .box1 {
+  width: 8px;
+  height: 8px;
+  background-color: #3b3b3b;
+  background-color: #3b3;
+  -webkit-box-shadow: 0px 0px 0px 1px #fff inset;
+          box-shadow: 0px 0px 0px 1px #fff inset;
+  z-index: 2;
+}
+
+.desktop .window .window-header section .btn .box2 {
+  position: relative;
+  left: 2;
+  bottom: 2;
+  z-index: 1;
+  width: 8px;
+  height: 8px;
+  background-color: #3b3b3b;
+  -webkit-box-shadow: 0px 0px 0px 1px #fff inset;
+          box-shadow: 0px 0px 0px 1px #fff inset;
 }
 
 .desktop .window .window-header section .btn.minimize {
-  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3b3b3b;
+}
+
+.desktop .window .window-header section .btn.minimize .line1 {
+  width: 8px;
+  height: 2px;
+  background: #fff;
 }
 
 .desktop .window .window-header h1 {
@@ -126,18 +236,14 @@ html, body {
 }
 
 .desktop .window main {
-  background-color: orange;
-  height: 100%;
+  background-color: black;
+  height: 95%;
   width: 100%;
 }
 
 .desktop .window main iframe {
   width: 100%;
   height: 100%;
-}
-
-.desktop .window main iframe.maximized {
-  height: 94.6%;
 }
 
 .desktop .icons {
@@ -174,8 +280,8 @@ html, body {
   padding: 12px 24px;
   border-radius: 12px;
   opacity: 0.8;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 
@@ -216,8 +322,8 @@ html, body {
   gap: 6px;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   padding: 6px 24px;
 }
 
@@ -229,8 +335,8 @@ html, body {
 .desktop .doc-wrapper .doc img {
   opacity: 0.8;
   width: 54px;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .desktop .doc-wrapper .doc img:hover {
