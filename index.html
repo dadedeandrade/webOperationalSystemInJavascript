@@ -11,7 +11,7 @@
 <body>
     <main class="desktop">
 
-        <section id="windowBrowser" class="window window-opened" onclick="increaseZindex()" >
+        <section id="windowBrowser" class="window">
             <header class="window-header">
                 <section>
                     <span class="btn close">
@@ -47,11 +47,21 @@
             <header class="window-header">
                 <section>
                     <span class="btn close">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
+                        <div class="crossIcon">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                        </div>
                     </span>
-                    <span onclick="maximizeHandler('windowLeague')" class="btn maximize"></span>
-                    <span class="btn minimize"></span>
+                    <span onclick="maximizeHandler('windowLeague')"  class="btn maximize">
+                        <div class="boxIcon">
+                            <div class="box1">
+                                <div class="box2"></div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="btn minimize">
+                        <div class="line1"></div>
+                    </span>
                 </section>
                 <h1>League of Legends</h1>
             </header>
