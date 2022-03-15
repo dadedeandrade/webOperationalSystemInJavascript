@@ -14,7 +14,7 @@
         <section id="windowBrowser" class="window">
             <header class="window-header">
                 <section>
-                    <span class="btn close">
+                    <span class="btn close" onclick="closeHandler('windowBrowser')">
                         <div class="crossIcon">
                             <div class="line1"></div>
                             <div class="line2"></div>
@@ -46,7 +46,7 @@
         <section id="windowLeague" class="window" >
             <header class="window-header">
                 <section>
-                    <span class="btn close">
+                    <span class="btn close" onclick="closeHandler('windowLeague')">
                         <div class="crossIcon">
                             <div class="line1"></div>
                             <div class="line2"></div>
@@ -71,7 +71,39 @@
             </main>
 
         </section>
+        
+        
+        <section id="windowProjects" class="window" >
+            <header class="window-header">
+                <section>
+                    <span class="btn close" onclick="closeHandler('windowProjects')">
+                        <div class="crossIcon">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                        </div>
+                    </span>
+                    <span onclick="maximizeHandler('windowProjects')"  class="btn maximize">
+                        <div class="boxIcon">
+                            <div class="box1">
+                                <div class="box2"></div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="btn minimize">
+                        <div class="line1"></div>
+                    </span>
+                </section>
+                <h1>Portifolio</h1>
+            </header>
 
+            <main>
+                <iframe class="iframe" src="https://simple-portfolio.andradeviniiciu.repl.co/" frameborder="0"></iframe>
+            </main>
+
+        </section>
+        
+        
+        
         <section class="leagueWarning">
             <div>
                 <p>Try maximizing the screen to initialize the game :)</p>
@@ -80,11 +112,11 @@
 
         <ul class="icons">
             <li class="icon">
-                <img alt="Ícone de Lixeira" src="https://img.icons8.com/color/48/000000/empty-trash--v1.png"/>
+                <img alt="Ícone de Lixeira" src="https://img.icons8.com/fluency/344/4a90e2/filled-trash.png"/>
                 <h1>Lixeira</h1>
             </li>
             <li class="icon">
-                <img alt="Ícone de Pasta" src="https://img.icons8.com/color/48/000000/folder-invoices--v1.png"/>
+                <img onclick="windowHandler('windowProjects')" alt="Ícone de Pasta" src="https://img.icons8.com/fluency/344/placeholder-thumbnail-xml.png"/>
                 <h1>Meus Projetos</h1>
             </li>
         </ul>
@@ -92,9 +124,8 @@
 
         <footer class="doc-wrapper">
             <section class="doc">
-                <img id="leagueIcon" src="https://img.icons8.com/color/48/000000/league-of-legends.png"/>
-                <img id="chromeIcon" src="https://img.icons8.com/color/2x/chrome.png"/>
-                <img src="https://img.icons8.com/color/2x/microsoft-teams.png"/>
+                <img style="transform: scale(0.95);" id="leagueIcon" src="https://img.icons8.com/fluency/2x/league-of-legends.png"/>
+                <img id="chromeIcon" src="https://img.icons8.com/fluency/344/chrome.png"/>
             </section>
         </footer>
     </main>
