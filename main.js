@@ -69,9 +69,11 @@ function maximizeHandler(windowId) {
   }
 }
 
+// Trash
+  const trashIcon = document.getElementById('trashIcon')
+  trashIcon.onclick(
+    dragElement(trashIcon)
+  )
 
-
-
-
-
-
+// File
+const portIcon = document.getElementById('portIcon')
