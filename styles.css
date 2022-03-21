@@ -40,10 +40,10 @@ body {
 .desktop {
   height: 100vh;
   background-color: #4e4e4e;
-  background-image: url("https://wallpaperaccess.com/full/660691.jpg");
+  background-image: url(assets/background.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: top;
   background-blend-mode: overlay;
   overflow: hidden;
   padding: 24px;
@@ -284,7 +284,6 @@ body {
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
-
 
 .desktop .icons .icon:hover {
   background-color: rgba(255, 255, 255, 0.219);
