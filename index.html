@@ -1,135 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" />
     <!-- https://icons8.com.br -->
-</head>
-<body>
+  </head>
+  <body>
     <main class="desktop">
+      <section id="windowBrowser" class="window">
+        <header class="window-header">
+          <section>
+            <span class="btn close" onclick="closeHandler('windowBrowser')">
+              <div class="crossIcon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+              </div>
+            </span>
+            <span
+              onclick="maximizeHandler('windowBrowser')"
+              class="btn maximize"
+            >
+              <div class="boxIcon">
+                <div class="box1">
+                  <div class="box2"></div>
+                </div>
+              </div>
+            </span>
+            <span class="btn minimize">
+              <div class="line1"></div>
+            </span>
+          </section>
+          <h1>Browser</h1>
+          <div style="width: 80px; opacity: 0"></div>
+        </header>
 
-        <section id="windowBrowser" class="window">
-            <header class="window-header">
-                <section>
-                    <span class="btn close" onclick="closeHandler('windowBrowser')">
-                        <div class="crossIcon">
-                            <div class="line1"></div>
-                            <div class="line2"></div>
-                        </div>
-                    </span>
-                    <span onclick="maximizeHandler('windowBrowser')"  class="btn maximize">
-                        <div class="boxIcon">
-                            <div class="box1">
-                                <div class="box2"></div>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="btn minimize">
-                        <div class="line1"></div>
-                    </span>
-                </section>
-                <h1>Browser</h1>
-                <div style="width: 80px; opacity: 0;"></div>
-            </header>
+        <main>
+          <iframe src="https://www.bing.com/?cc=br" frameborder="0"></iframe>
+        </main>
+      </section>
 
-            <main>
-                <iframe src="https://www.bing.com/?cc=br" frameborder="0"></iframe>
-            </main>
+      <section id="windowLeague" class="window">
+        <header class="window-header">
+          <section>
+            <span class="btn close" onclick="closeHandler('windowLeague')">
+              <div class="crossIcon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+              </div>
+            </span>
+            <span
+              onclick="maximizeHandler('windowLeague')"
+              class="btn maximize"
+            >
+              <div class="boxIcon">
+                <div class="box1">
+                  <div class="box2"></div>
+                </div>
+              </div>
+            </span>
+            <span class="btn minimize">
+              <div class="line1"></div>
+            </span>
+          </section>
+          <h1>League of Legends</h1>
+        </header>
 
+        <main>
+          <iframe
+            class="iframe"
+            src="https://angularoflegends.ivinrodrigues.com"
+            frameborder="0"
+          ></iframe>
+        </main>
+      </section>
+
+      <section id="windowProjects" class="window">
+        <header class="window-header">
+          <section>
+            <span class="btn close" onclick="closeHandler('windowProjects')">
+              <div class="crossIcon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+              </div>
+            </span>
+            <span
+              onclick="maximizeHandler('windowProjects')"
+              class="btn maximize"
+            >
+              <div class="boxIcon">
+                <div class="box1">
+                  <div class="box2"></div>
+                </div>
+              </div>
+            </span>
+            <span class="btn minimize">
+              <div class="line1"></div>
+            </span>
+          </section>
+          <h1>Portifolio</h1>
+        </header>
+
+        <main>
+          <iframe
+            class="iframe"
+            src="https://vinicius-andrade.vercel.app/"
+            frameborder="0"
+          ></iframe>
+        </main>
+      </section>
+
+      <section class="leagueWarning">
+        <div>
+          <p>Try maximizing the screen to initialize the game :)</p>
+        </div>
+      </section>
+
+      <ul class="icons">
+        <li id="trashIcon" class="icon">
+          <img
+            alt="Ícone de Lixeira"
+            src="https://img.icons8.com/fluency/344/4a90e2/filled-trash.png"
+          />
+          <h1>Lixeira</h1>
+        </li>
+        <li id="portIcon" class="icon">
+          <img
+            onclick="windowHandler('windowProjects')"
+            alt="Ícone de Pasta"
+            src="https://img.icons8.com/fluency/344/placeholder-thumbnail-xml.png"
+          />
+          <h1>Meus Projetos</h1>
+        </li>
+      </ul>
+
+      <footer class="doc-wrapper">
+        <section class="doc">
+          <img
+            id="leagueIcon"
+            src="https://img.icons8.com/fluency/2x/league-of-legends.png"
+          />
+          <img
+            id="chromeIcon"
+            src="https://img.icons8.com/fluency/344/chrome.png"
+          />
         </section>
-
-
-
-        <section id="windowLeague" class="window" >
-            <header class="window-header">
-                <section>
-                    <span class="btn close" onclick="closeHandler('windowLeague')">
-                        <div class="crossIcon">
-                            <div class="line1"></div>
-                            <div class="line2"></div>
-                        </div>
-                    </span>
-                    <span onclick="maximizeHandler('windowLeague')"  class="btn maximize">
-                        <div class="boxIcon">
-                            <div class="box1">
-                                <div class="box2"></div>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="btn minimize">
-                        <div class="line1"></div>
-                    </span>
-                </section>
-                <h1>League of Legends</h1>
-            </header>
-
-            <main>
-                <iframe class="iframe" src="https://angularoflegends.ivinrodrigues.com" frameborder="0"></iframe>
-            </main>
-
-        </section>
-        
-        
-        <section id="windowProjects" class="window" >
-            <header class="window-header">
-                <section>
-                    <span class="btn close" onclick="closeHandler('windowProjects')">
-                        <div class="crossIcon">
-                            <div class="line1"></div>
-                            <div class="line2"></div>
-                        </div>
-                    </span>
-                    <span onclick="maximizeHandler('windowProjects')"  class="btn maximize">
-                        <div class="boxIcon">
-                            <div class="box1">
-                                <div class="box2"></div>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="btn minimize">
-                        <div class="line1"></div>
-                    </span>
-                </section>
-                <h1>Portifolio</h1>
-            </header>
-
-            <main>
-                <iframe class="iframe" src="https://simple-portfolio.andradeviniiciu.repl.co/" frameborder="0"></iframe>
-            </main>
-
-        </section>
-        
-        
-        
-        <section class="leagueWarning">
-            <div>
-                <p>Try maximizing the screen to initialize the game :)</p>
-            </div>
-        </section>
-
-        <ul class="icons">
-            <li id="trashIcon" class="icon">
-                <img alt="Ícone de Lixeira" src="https://img.icons8.com/fluency/344/4a90e2/filled-trash.png"/>
-                <h1>Lixeira</h1>
-            </li>
-            <li id="portIcon" class="icon">
-                <img onclick="windowHandler('windowProjects')" alt="Ícone de Pasta" src="https://img.icons8.com/fluency/344/placeholder-thumbnail-xml.png"/>
-                <h1>Meus Projetos</h1>
-            </li>
-        </ul>
-        
-
-        <footer class="doc-wrapper">
-            <section class="doc">
-                <img  id="leagueIcon" src="https://img.icons8.com/fluency/2x/league-of-legends.png"/>
-                <img id="chromeIcon" src="https://img.icons8.com/fluency/344/chrome.png"/>
-            </section>
-        </footer>
+      </footer>
     </main>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
