@@ -1,5 +1,8 @@
 function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  var pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
   if (document.getElementById(elmnt.id + "Header")) {
     document.getElementById(elmnt.id + "Header").onmousedown = dragMouseDown;
   } else {
@@ -22,8 +25,8 @@ function dragElement(elmnt) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
   }
 
   function closeDragElement() {
@@ -32,48 +35,50 @@ function dragElement(elmnt) {
   }
 }
 
+const chromeIcon = document.getElementById("chromeIcon");
 
-const chromeIcon = document.getElementById('chromeIcon')
+chromeIcon.addEventListener("click", () => {
+  windowHandler("windowBrowser");
+});
 
-chromeIcon.addEventListener('click',()=>{
-  windowHandler('windowBrowser')
-})
-const leagueIcon = document.getElementById('leagueIcon')
+const leagueIcon = document.getElementById("leagueIcon");
 
-leagueIcon.addEventListener('click',()=>{
-  windowHandler('windowLeague')
-})
+leagueIcon.addEventListener("click", () => {
+  windowHandler("windowLeague");
+});
 
+const terminalIcon = document.getElementById("terminalIcon");
 
+terminalIcon.addEventListener("click", () => {
+  windowHandler("windowTerminal");
+});
 
 function windowHandler(windowId) {
-  const currentWindow = document.getElementById(windowId)
-  currentWindow.classList.add('window-opened')
-  
+  const currentWindow = document.getElementById(windowId);
+  currentWindow.classList.add("window-opened");
+
   dragElement(currentWindow);
 }
 
 function closeHandler(windowId) {
-  const currentWindow = document.getElementById(windowId)
-  currentWindow.classList.remove('window-opened')
-  
+  const currentWindow = document.getElementById(windowId);
+  currentWindow.classList.remove("window-opened");
 }
 
 function maximizeHandler(windowId) {
-
-  let windowElementClassList = document.getElementById(windowId).classList
-  let iframe = document.querySelectorAll('.iframe')
-  windowElementClassList.contains('maximized') ? windowElementClassList.remove('maximized') : windowElementClassList.add('maximized')
-  for(i=0;i<iframe.length;i++){
-    iframe[i].classList.toggle('maximized')
+  let windowElementClassList = document.getElementById(windowId).classList;
+  let iframe = document.querySelectorAll(".iframe");
+  windowElementClassList.contains("maximized")
+    ? windowElementClassList.remove("maximized")
+    : windowElementClassList.add("maximized");
+  for (i = 0; i < iframe.length; i++) {
+    iframe[i].classList.toggle("maximized");
   }
 }
 
 // Trash
-  const trashIcon = document.getElementById('trashIcon')
-  trashIcon.onclick(
-    dragElement(trashIcon)
-  )
+const trashIcon = document.getElementById("trashIcon");
+trashIcon.onclick(dragElement(trashIcon));
 
 // File
-const portIcon = document.getElementById('portIcon')
+const portIcon = document.getElementById("portIcon");

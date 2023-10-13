@@ -112,6 +112,41 @@
         </main>
       </section>
 
+      <section id="windowTerminal" class="window">
+        <header class="window-header">
+          <section>
+            <span class="btn close" onclick="closeHandler('windowTerminal')">
+              <div class="crossIcon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+              </div>
+            </span>
+            <span
+              onclick="maximizeHandler('windowTerminal')"
+              class="btn maximize"
+            >
+              <div class="boxIcon">
+                <div class="box1">
+                  <div class="box2"></div>
+                </div>
+              </div>
+            </span>
+            <span class="btn minimize">
+              <div class="line1"></div>
+            </span>
+          </section>
+          <h1>andradeviniicius@github: ~</h1>
+        </header>
+
+        <main>
+          <iframe
+            class="iframe"
+            src="https://fake-terminal-resume.vercel.app/"
+            frameborder="0"
+          ></iframe>
+        </main>
+      </section>
+
       <section class="leagueWarning">
         <div>
           <p>Try maximizing the screen to initialize the game :)</p>
@@ -145,6 +180,10 @@
           <img
             id="chromeIcon"
             src="https://img.icons8.com/fluency/344/chrome.png"
+          />
+          <img
+            id="terminalIcon"
+            src="https://img.icons8.com/fluency/419/console.png"
           />
         </section>
       </footer>
