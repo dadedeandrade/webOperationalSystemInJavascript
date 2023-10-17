@@ -53,7 +53,7 @@ body {
 }
 
 .desktop .window {
-  width: 80vh;
+  width: 80vw;
   height: 70vh;
   background-color: rgba(0, 0, 0, 0.123);
   border-radius: 25%;
