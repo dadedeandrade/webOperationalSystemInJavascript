@@ -1,5 +1,6 @@
 <details>
 <summary>README EN-US</summary>
+  
 # Web-based Linux OS Replication
 
 Welcome to the Web-based Linux OS Replication project! 🐧 This project is a replication of a Linux-like operating system in a web environment, built using HTML, CSS, and JavaScript. It provides users with an interactive experience reminiscent of a Linux desktop.
@@ -43,6 +44,7 @@ Happy coding! 🐱‍💻
 </details>
 <details>
 <summary>README PT-BR</summary>
+  
 # Replicação de Sistema Operacional Linux na Web
 
 Bem-vindo a Replicação de Sistema Operacional Linux na Web! 🐧 Este projeto é uma reprodução de um sistema operacional semelhante ao Linux em um ambiente web, construído com HTML, CSS e JavaScript. Ele proporciona aos usuários uma experiência interativa semelhante a um desktop Linux.
